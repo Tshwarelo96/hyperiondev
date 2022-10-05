@@ -99,6 +99,78 @@ public class SayNumber {
 
             }
 
+        }else if(num < 100000){
+
+            int numb = Integer.parseInt(""+num1.charAt(0));
+            int numb_1 = Integer.parseInt(""+num1.charAt(1));
+            int numb_2 = Integer.parseInt(""+num1.charAt(2));
+            int numb_3 = numb_1*10+numb_2;
+
+            stringNum += units.get(numb) +" "+ base.get(3);
+
+            if (numb_3 == 0){
+
+            }else
+            if(numb_3 < 10 ){
+                stringNum += " "+units.get(numb_3);
+
+            }else if(numb_3 < 20) {
+                stringNum += " "+tens.get(numb_3);
+
+            }else if(numb_3 < 100){
+                int numb_a = Integer.parseInt(""+Integer.toString(numb_3).charAt(1));
+                stringNum += " "+hundres.get(numb_3-numb_a) + " "+units.get(numb_a);
+
+            }
+
+        }else if(num < 1000000){
+
+            int numb = Integer.parseInt(""+num1.charAt(0));
+            int numb_1 = Integer.parseInt(""+num1.charAt(1));
+            int numb_2 = Integer.parseInt(""+num1.charAt(2));
+            int numb_3 = numb_1*10+numb_2;
+
+            stringNum += units.get(numb) +" "+ base.get(3);
+
+            if (numb_3 == 0){
+
+            }else
+            if(numb_3 < 10 ){
+                stringNum += " "+units.get(numb_3);
+
+            }else if(numb_3 < 20) {
+                stringNum += " "+tens.get(numb_3);
+
+            }else if(numb_3 < 100){
+                int numb_a = Integer.parseInt(""+Integer.toString(numb_3).charAt(1));
+                stringNum += " "+hundres.get(numb_3-numb_a) + " "+units.get(numb_a);
+
+            }
+
+        }else if(num < 1000000000){
+
+            int numb = Integer.parseInt(""+num1.charAt(0));
+            int numb_1 = Integer.parseInt(""+num1.charAt(1));
+            int numb_2 = Integer.parseInt(""+num1.charAt(2));
+            int numb_3 = numb_1*10+numb_2;
+
+            stringNum += units.get(numb) +" "+ base.get(3);
+
+            if (numb_3 == 0){
+
+            }else
+            if(numb_3 < 10 ){
+                stringNum += " "+units.get(numb_3);
+
+            }else if(numb_3 < 20) {
+                stringNum += " "+tens.get(numb_3);
+
+            }else if(numb_3 < 100){
+                int numb_a = Integer.parseInt(""+Integer.toString(numb_3).charAt(1));
+                stringNum += " "+hundres.get(numb_3-numb_a) + " "+units.get(numb_a);
+
+            }
+
         }
         return stringNum;
     }
